@@ -1,0 +1,722 @@
+/*DZ8*/
+
+/* ------ Подключение шрифтов ------ */
+
+@font-face {
+  font-family: 'Museo Sans 100';
+  src: url('../fonts/museosanscyrl-100.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/museosanscyrl-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/museosanscyrl-100.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/museosanscyrl-100.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/museosanscyrl-100.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/museosanscyrl-100.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Museo Sans 300';
+  src: url('../fonts/museosanscyrl-300.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/museosanscyrl-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/museosanscyrl-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/museosanscyrl-300.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/museosanscyrl-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/museosanscyrl-300.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Museo Sans 900';
+  src: url('../fonts/museosanscyrl-900.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/museosanscyrl-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/museosanscyrl-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/museosanscyrl-900.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/museosanscyrl-900.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/museosanscyrl-900.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Natasha';
+  src: url('../fonts/Natasha.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Natasha.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Natasha.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Natasha.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Natasha.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Natasha.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* ------ Спецификация ------ */
+
+body {
+	font-family: 'Museo Sans 100', 'Museo Sans 300', 'Museo Sans 900', sans-serif;
+	color: #000; 
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 940px; 
+	margin: 0 auto;
+}
+
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+    font-size: 15px;
+    font-family: 'Museo Sans 300';
+    letter-spacing: 0.02em;
+    color: #000;
+}
+
+ul, li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Natasha';
+	letter-spacing: 0.12em;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+}
+
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.justify-content-around {
+	justify-content: space-around;
+}
+
+.align-items-center { 
+	align-items: center; 
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+	outline: none;
+}
+
+/* ------ Первый экран ------ */
+.header {
+	background: #323d29 url(../img/backgraund.jpg) no-repeat center top / cover;
+	padding-top: 52px;
+	padding-bottom: 81px;
+}
+
+.nav {
+	margin-bottom: 288px;
+}
+
+.nav__logo span, .topic__title, .topic__subtitle, .nav__link {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.nav__logo {
+	font-size: 17px;
+	margin-right: 19px;	 
+	display: block;
+}
+
+.nav__begin {
+	font-family: 'Museo Sans 100';
+}
+
+.nav__last, .nav__link {
+	font-family: 'Museo Sans 900';
+}
+
+.nav__last {
+	 margin-left: -7px;
+}
+
+.nav__items:not(:last-child) {
+	margin-right: 15px;
+}
+
+.nav__email {
+	font-family: 'Museo Sans 300';
+ 	letter-spacing: 0.12em;
+ 	color: #fff;
+ 	font-size: 13px;
+ 	border-bottom: 1px solid #6d6f6a;
+ 	line-height: 22px;
+}
+
+.nav__email:hover {
+	 
+}
+
+.nav__link {
+	outline: none;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.nav__link:hover {
+	background: #fff;
+	color: #000;
+}
+
+.topic {
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	margin-left: 7px;
+}
+
+.topic__title {
+	font-size: 49px;
+	line-height: 60px;
+}
+
+.topic__subtitle{
+	font-family: 'Museo Sans 100';
+	font-size: 29px;
+	margin-bottom: 247px;
+	line-height: 55px;
+}
+
+.topic__link {
+	display: block;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	align-items: center;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	margin-right: 9px;
+	font-size: 18px;
+}
+
+.topic__link:hover {
+	background: #fff;
+	color: #000;
+}
+
+/* ------ Второй экран ------ */
+
+.creator {
+	padding-top: 86px;
+	padding-bottom: 50px;
+}
+
+.wrap-creator__title {
+	font-size: 37px;
+	margin-bottom: 70px;
+	color: #888886;
+}
+
+.background {
+	width: 435px;
+}
+
+.background__subtitle {
+	font-size: 22px;
+	color: #888886;
+	margin-bottom: 35px;
+}
+
+.background__text {
+	margin-bottom: 27px;
+	line-height: 27px;
+}
+
+.background__text:last-child {
+	margin-bottom: 0px;
+}
+
+.info__subtitle {
+	font-size: 22px;
+	color: #888886;
+}
+
+.info__subtitle:last-chiil {
+	margin-bottom: 37px;
+}
+
+.info {
+	width: 461px;
+}
+
+.info__list {
+	flex-wrap: wrap;
+	margin-top: 54px;
+}
+
+.info__item {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info__item:last-child {
+	margin-right: 0;
+}
+
+.info__wrap {
+	width: 74px;
+	height: 74px;
+	border: 2px solid #3d6433;
+	display: flex;
+	text-align: center;
+	position: relative;
+	justify-content: center;
+    align-items: center;
+	transform: rotate(-45deg);
+}
+
+.info__wrap:after {
+	content:'';
+	display: block;
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	border: 1px solid #3d6433;
+	left: 7px;
+	top: 7px;
+}
+
+.info__number {
+	font-size: 20px;
+	font-family: 'Museo Sans 100';
+	color: #3d6433;
+}
+
+.info__number {
+	transform: rotate(45deg);
+}
+
+.info__experience {
+	margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.info__top-block {
+    padding-bottom: 61px;
+}
+
+.info__column {
+	margin-top: 26px;
+	font-size: 14px;
+ 	font-family: 'Museo Sans 300';
+}
+
+.info__link {
+	line-height: 23px;
+	color: #3d6433;
+	text-decoration: none;
+	letter-spacing: 0.12em;
+	border-bottom: 1px solid #becbbb;
+	margin-bottom: 15px;
+}
+
+.info__contact {
+ 	margin-right: 43px;
+ 	height: 94px;
+ 	align-items: flex-start;
+ 	flex-direction: column;
+	padding: 0;
+ }
+
+ .info__contact:last-child {
+ 	margin-right: 0;
+ }
+
+.info__img {
+	background: #eef1ed url(../img/person1.png) no-repeat center top;
+	width: 83px;
+	height: 63px;
+	border-radius: 50%;
+	border: 1px solid #eef1ed;
+}
+
+ .info__write-me {
+ 	margin-left: 20px;
+ 	color: #797a77;
+ 	font-size: 14px;
+ 	letter-spacing: 0;
+ }
+
+/* ------ Третий экран ------ */
+
+.attainments {
+	padding-top: 40px;
+	padding-bottom: 41px;
+}
+
+.wrap-attainments__title {
+	margin-bottom: 55px;
+	font-size: 37px;
+}
+
+.skills__number {
+	width: 61px;
+	height: 61px;
+	display: flex;
+	text-align: center;
+	position: relative;
+	justify-content: center;
+    align-items: center;
+	border: 2px solid #3d6433;
+	border-radius: 50%;
+	font-size: 13px;
+	font-family: 'Museo Sans 100';
+	letter-spacing: 0.12em;
+}
+
+.skills__number:after {
+	content:'';
+	display: block;
+	position: absolute;
+	width: 49px;
+	height: 49px;
+	border: 1px solid #3d6433;
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+}
+
+.skills__text {
+	margin-left: 27px;
+	font-size: 15px;
+	font-family: 'Museo Sans 900';
+	line-height: 61px;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+/* ------ Четверый экран ------ */
+
+ .works {
+ 	padding-top: 43px;
+ 	padding-bottom: 40px;
+ }
+
+ .wrap-works__title {
+ 	font-size: 37px;
+ 	margin-bottom: 51px;
+ }
+
+.example__img {
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+}
+
+.example__items {
+ 	position: relative;
+}
+
+.exemple__overlay {
+ 	background: rgba(0,0,0,0.56);
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	opacity: 0;
+ 	transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.example__items:hover .exemple__overlay {
+	opacity: 1;
+}
+
+.exemple__top {
+	font-family: 'Museo Sans 900';
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    height: 47px;
+    width: 160px;
+    text-align: center;
+}
+
+.exemple__link {
+	font-size: 13px;
+	line-height: 35px;
+	font-family: 'Museo Sans 300';
+	color: #fff;
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+}
+
+/* ------ Футер ------ */
+
+.footer {
+	padding-top: 85px;
+	padding-bottom: 110px;
+}
+
+.years-future__text {
+	font-size: 11px;
+	font-family: 'Museo Sans 300';
+	letter-spacing: 0.14em;
+	color: #888886;
+	text-transform: uppercase;
+}
+
+.experience {
+	margin-top: 50px;
+}
+.experience .background__subtitle {
+	margin-bottom: 10px;
+}
+
+.background__info {
+	margin-bottom: 20px;
+}
+/* ------ Media Queries ------ */
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {
+	
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 700px;
+	}
+
+	.topic__title {
+		font-size: 44px;
+	}
+
+	h1, h2, h3 {
+		text-align: center;
+	}
+
+	.topic__subtitle {
+    	font-size: 25px;
+	}
+
+	.about-me {
+		flex-direction: column;
+	}
+
+	.background {
+		width: 100%;
+	}
+
+	.info {
+		width: 100%;
+	}
+	
+	.info__column {
+	    justify-content: space-around;
+	}
+
+	.info__top-block{
+		padding-top: 55px;
+	}
+
+	 .skills {
+		width: 100%;
+	 	flex-wrap: wrap;
+	}
+
+	 .skills__info {
+	 	margin-bottom: 20px;
+	 	margin-right: 20px;
+ 	}
+
+	.example {
+		flex-wrap: wrap;
+		justify-content: space-around;
+		
+	}
+
+	.example__items {
+		margin-bottom: 30px;
+	}
+
+	.example__img{
+	 	max-width: 100%;
+	 	height: auto;	
+	}
+
+	.footer {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+	}
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 520px;
+	}
+
+	.nav {
+    	margin-bottom: 40px;
+	}
+	 
+	.nav__list{
+	    display: none
+	}
+
+	.topic {
+		padding-top: 310px;
+	}    
+
+	.topic__title {
+		font-size: 32px;
+	}
+
+	.topic__subtitle {
+    	font-size: 19px;
+	}	
+
+	.wrap-creator__title, .wrap-attainments__title, .wrap-works__title {
+		font-size: 28px;
+	}
+
+	.background__subtitle, .info__subtitle {
+		font-size: 17px;
+	}
+
+	.skills {
+		text-align: center;
+		margin-right: 0;
+	}
+
+	.skills__text {
+		margin-right: 0px;
+	}
+
+	.example__items {
+		width: 100%;
+	}
+}	
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+
+	.wrap-creator__title, .wrap-attainments__title, .wrap-works__title {
+		font-size: 22px;
+	}
+
+	.background__subtitle, .info__subtitle {
+		font-size: 17px;
+	}
+
+	.background__text {
+		font-size: 12px;
+	}
+
+	.creator, .attainments, .works, .footer {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.nav__list, .nav__email {
+		display: none;
+	}
+
+	.nav__logo {
+		text-align: center;
+   		margin: auto;	
+	}
+
+	.topic {
+		padding-top: 105px;
+		line-height: 33px;
+	}
+
+	.topic__title {
+		font-size: 26px;
+		line-height: 34px;
+	}
+
+	.topic__subtitle {
+    	font-size: 17px;
+    	margin-bottom: 120px;
+	}	
+
+	.wrap-creator__title {
+		margin-bottom: 40px;
+	}
+
+	.info__list {
+		flex-direction: column;
+	}
+
+	.info__item{
+		margin-bottom: 20px;
+	}
+
+	.info__write {
+		margin-top: 20px;
+	}
+
+	.info__column {
+	 	align-items: center;
+	 	flex-direction: column;
+	}
+
+	.info__contact {
+		margin-right: 0;
+	}
+
+	.skills {
+		flex-direction: column;
+
+	}
+	.skills__info {
+		margin-right: 0;
+		width: 205px;
+	}
+
+	.skills__text {
+		font-size: 13px;
+	}
+
+	.example {
+	 	flex-direction: column;
+	}
+
+	.exemple__top {
+		font-size: 13px;
+	}
+
+	.exemple__link {
+		font-size: 11px;
+	}
+
+	.example__items {
+	    width: 90%;
+	    margin: 0 auto;
+	}
+}
